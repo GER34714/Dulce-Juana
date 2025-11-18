@@ -6,12 +6,12 @@
 <title>Dulce Juana™ | Repostería de Lujo</title>
 
 <!-- FAVICON -->
-<link rel="icon" href="https://iili.io/fJ8Gmq7.md.png" type="image/png">
+<link rel="icon" href="https://iili.io/fJUF6Av.md.jpg" type="image/png">
 
 <!-- OPEN GRAPH -->
-<meta property="og:title" content="Dulce Juana™ | Repostería de Lujo">
-<meta property="og:description" content="Tortas premium, cupcakes y repostería de alta calidad.">
-<meta property="og:image" content="https://iili.io/fJ8Gmq7.md.png">
+<meta property="og:title" content="Dulce Juana™ | Repostería Artesanal Premium">
+<meta property="og:description" content="Tortas premium, cupcakes y repostería hecha con amor. Realizá tu pedido por WhatsApp.">
+<meta property="og:image" content="https://iili.io/fJUF6Av.md.jpg">
 <meta property="og:type" content="website">
 
 <!-- FUENTES -->
@@ -21,9 +21,7 @@
     body {
         margin: 0;
         font-family: "Poppins", sans-serif;
-        background: #fdebf4 url('https://iili.io/J9v2F5Q.png');
-        background-size: cover;
-        background-attachment: fixed;
+        background: #fdebf4;
         color: #6a5b5b;
         overflow-x: hidden;
         text-align: center;
@@ -32,7 +30,7 @@
     /* HERO */
     .hero {
         padding: 70px 20px;
-        background:url('https://iili.io/J9v2iyu.jpg') center/cover no-repeat;
+        background: url('https://iili.io/J9v2iyu.jpg') center/cover no-repeat;
         background-attachment: fixed;
         border-radius: 0 0 45px 45px;
         box-shadow: 0 10px 40px rgba(0,0,0,0.15);
@@ -41,15 +39,8 @@
     }
 
     .hero img {
-        width: 220px;
+        width: 240px;
         filter: drop-shadow(0px 0px 12px rgba(255,255,255,0.8));
-        animation: glow 3s infinite ease-in-out;
-    }
-
-    @keyframes glow {
-        0% { filter: drop-shadow(0 0 6px rgba(255,255,255,0.7)); }
-        50% { filter: drop-shadow(0 0 14px rgba(255,255,255,1)); }
-        100% { filter: drop-shadow(0 0 6px rgba(255,255,255,0.7)); }
     }
 
     h1 {
@@ -91,6 +82,7 @@
 
     .btn img { width: 24px; }
 
+
     /* SLIDER */
     .slider {
         margin: 40px auto;
@@ -98,13 +90,12 @@
         border-radius: 22px;
         overflow: hidden;
         box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        animation: fadeInUp 1.2s ease;
     }
 
     .slides {
         display: flex;
-        width: 400%;
-        animation: slide 14s infinite;
+        width: 800%;
+        animation: slide 20s infinite;
     }
 
     .slides img {
@@ -114,13 +105,15 @@
 
     @keyframes slide {
         0% { margin-left: 0; }
-        20% { margin-left: 0; }
-        25% { margin-left: -100%; }
-        45% { margin-left: -100%; }
-        50% { margin-left: -200%; }
-        70% { margin-left: -200%; }
-        75% { margin-left: -300%; }
-        100% { margin-left: -300%; }
+        10% { margin-left: 0; }
+        20% { margin-left: -100%; }
+        30% { margin-left: -200%; }
+        40% { margin-left: -300%; }
+        50% { margin-left: -400%; }
+        60% { margin-left: -500%; }
+        70% { margin-left: -600%; }
+        80% { margin-left: -700%; }
+        100% { margin-left: -700%; }
     }
 
     /* SECCIONES */
@@ -145,6 +138,7 @@
         padding: 20px;
         border-radius: 20px;
         box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        font-size: 1rem;
         animation: fadeInUp 1.2s;
     }
 
@@ -184,19 +178,7 @@
         box-shadow: 0 4px 14px rgba(0,0,0,0.1);
     }
 
-    /* SELLO */
-    .sello {
-        font-family: "Pacifico";
-        font-size: 2rem;
-        color: #ff7aa8;
-        position: absolute;
-        top: -20px;
-        right: 20px;
-        transform: rotate(10deg);
-        opacity: 0.7;
-    }
-
-    /* WHATSAPP + INSTAGRAM FLOTANTES */
+    /* FLOTANTES */
     .float {
         position: fixed;
         bottom: 25px;
@@ -207,7 +189,7 @@
         z-index: 999;
     }
 
-    .float a img {
+    .float img {
         width: 55px;
         filter: drop-shadow(0 3px 10px rgba(0,0,0,0.3));
     }
@@ -215,12 +197,13 @@
     /* ANIMACIONES */
     @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
     @keyframes fadeInUp { from{opacity:0; transform: translateY(20px);} to{opacity:1; transform: translateY(0);} }
+
 </style>
 </head>
 
 <body>
 
-<!-- FLOAT -->
+<!-- FLOAT ICONS -->
 <div class="float">
     <a href="https://wa.me/541162854827" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></a>
     <a href="https://www.instagram.com/dulce_juana.2021/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"></a>
@@ -228,8 +211,7 @@
 
 <!-- HERO -->
 <div class="hero">
-    <span class="sello">Hecho con Amor 💖</span>
-    <img src="https://iili.io/fJ8Gmq7.md.png">
+    <img src="https://iili.io/fJUF6Av.md.jpg" alt="Logo Dulce Juana">
     <h1>Dulce Juana™</h1>
     <p class="sub">Repostería artesanal • Tortas premium • Mesas dulces</p>
 
@@ -242,20 +224,28 @@
 <!-- SLIDER -->
 <div class="slider">
     <div class="slides">
-        <img src="https://scontent.cdninstagram.com/v/t51.82787-15/522405926_17973452144910114_1209673433006266889_n.jpg">
-        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/463954250_1265471894677572_2312230245245910210_n.jpg">
-        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/463983827_557562730008441_7887479189490029813_n.jpg">
-        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/466043431_909093347984363_2589842959087983193_n.jpg">
+        <img src="https://iili.io/fJSmju1.md.jpg">
+        <img src="https://iili.io/fJSmW8B.md.jpg">
+        <img src="https://iili.io/fJSmM3Q.md.jpg">
+        <img src="https://iili.io/fJSmXyP.md.jpg">
+        <img src="https://iili.io/fJSmNZg.md.jpg">
+        <img src="https://iili.io/fJSmena.md.jpg">
+        <img src="https://iili.io/fJSmkMJ.md.jpg">
+        <img src="https://iili.io/fJSmv6v.md.jpg">
     </div>
 </div>
 
 <section>
-    <h2>Nuestros Trabajos</h2>
+    <h2>Galería</h2>
     <div class="galeria">
-        <img src="https://scontent.cdninstagram.com/v/t51.82787-15/522405926_17973452144910114_1209673433006266889_n.jpg">
-        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/463954250_1265471894677572_2312230245245910210_n.jpg">
-        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/463983827_557562730008441_7887479189490029813_n.jpg">
-        <img src="https://scontent.cdninstagram.com/v/t51.29350-15/466043431_909093347984363_2589842959087983193_n.jpg">
+        <img src="https://iili.io/fJSmju1.md.jpg">
+        <img src="https://iili.io/fJSmW8B.md.jpg">
+        <img src="https://iili.io/fJSmM3Q.md.jpg">
+        <img src="https://iili.io/fJSmXyP.md.jpg">
+        <img src="https://iili.io/fJSmNZg.md.jpg">
+        <img src="https://iili.io/fJSmena.md.jpg">
+        <img src="https://iili.io/fJSmkMJ.md.jpg">
+        <img src="https://iili.io/fJSmv6v.md.jpg">
     </div>
 </section>
 
@@ -278,7 +268,7 @@
 </section>
 
 <footer>
-    © 2025 Dulce Juana™ — Repostería de Lujo
+    © 2025 Dulce Juana™ — Repostería Premium
 </footer>
 
 </body>
