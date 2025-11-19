@@ -21,18 +21,28 @@
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    background: #fdebf4;
+    background: linear-gradient(180deg, #fdebf4 0%, #ffeef7 40%, #fff7fc 100%);
     color: #6a5b5b;
     overflow-x: hidden;
     text-align: center;
 }
 
+/* ANIMACIÓN SCROLL */
+.fade {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all .8s ease;
+}
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* HERO */
 .hero {
     padding: 70px 20px;
-    background: #fdebf4;
+    background: transparent;
     border-radius: 0 0 45px 45px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
 }
 
 .hero img {
@@ -51,90 +61,6 @@ h1 {
     font-size: 1.3rem;
     margin-bottom: 20px;
 }
-
-/* GALERÍA */
-.galeria {
-    display: grid;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-    gap: 25px;
-    grid-template-columns: 1fr; /* MOBILE limpio */
-}
-
-@media(min-width: 700px) {
-    .galeria {
-        grid-template-columns: repeat(3, 1fr); /* PC ordenado */
-    }
-}
-
-.item {
-    background: white;
-    padding: 15px;
-    border-radius: 18px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    transition: .3s;
-    border: 2px solid #f4dce7;
-}
-
-.item:hover {
-    transform: translateY(-4px);
-}
-
-.item img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.item h3 {
-    font-family: "Pacifico";
-    font-size: 1.7rem;
-    margin: 10px 0 5px;
-    color: #d86b94;
-}
-
-.item p {
-    font-size: 1rem;
-    margin: 0;
-    color: #6a5b5b;
-}
-
-/* FLOAT ICONS – más chicos en celu */
-.float {
-    position: fixed;
-    bottom: 18px;
-    right: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 999;
-}
-
-.float img {
-    width: 45px; /* más chico */
-    filter: drop-shadow(0 3px 10px rgba(0,0,0,0.3));
-}
-
-@media(min-width: 700px) {
-    .float img { width: 55px; }
-}
-
-/* BOTÓN IG */
-.btn-instagram-full {
-    margin: 40px auto 10px;
-    display: inline-block;
-    background: #ffffff;
-    padding: 14px 30px;
-    border-radius: 40px;
-    box-shadow: 0 5px 14px rgba(0,0,0,0.15);
-    font-weight: 600;
-    text-decoration: none;
-    color: #d86b94;
-    border: 2px solid #d86b94;
-    transition: 0.2s;
-}
-
-.btn-instagram-full:hover { transform: scale(1.05); }
 
 /* BOTONES HERO */
 .btns {
@@ -162,6 +88,117 @@ h1 {
 
 .btn img { width: 24px; }
 
+/* FILTROS */
+.filtros {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filtros button {
+    background: white;
+    border: 2px solid #d86b94;
+    color: #d86b94;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.filtros button:hover {
+    background: #d86b94;
+    color: white;
+}
+
+/* GALERÍA */
+.galeria {
+    display: grid;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    gap: 25px;
+    grid-template-columns: 1fr;
+}
+
+@media(min-width: 700px) {
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.item {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    border: 2px solid #f4dce7;
+    transition: .3s;
+}
+
+.item:hover { transform: translateY(-4px); }
+
+.item img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.item h3 {
+    font-family: "Pacifico";
+    font-size: 1.7rem;
+    margin: 12px 0 5px;
+    color: #d86b94;
+}
+
+.item p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* BOTÓN IG */
+.btn-instagram-full {
+    margin: 40px auto 10px;
+    display: inline-block;
+    background: #ffffff;
+    padding: 14px 30px;
+    border-radius: 40px;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+    font-weight: 600;
+    text-decoration: none;
+    color: #d86b94;
+    border: 2px solid #d86b94;
+    transition: 0.2s;
+}
+
+.btn-instagram-full:hover { transform: scale(1.05); }
+
+/* FLOAT ICONS */
+.float {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 999;
+}
+
+.float img {
+    width: 40px;
+}
+
+@media(min-width: 700px) {
+    .float img { width: 55px; }
+}
+
+footer {
+    margin-top: 60px;
+    font-size: 0.9rem;
+    padding: 20px 0;
+    color: #b48a9a;
+}
 </style>
 </head>
 
@@ -178,7 +215,7 @@ h1 {
 </div>
 
 <!-- HERO -->
-<div class="hero">
+<div class="hero fade">
     <img src="https://iili.io/fJUF6Av.md.jpg" alt="Logo Dulce Juana">
     <h1>Dulce Juana™</h1>
     <p class="sub">Repostería artesanal • Tortas premium • Mesas dulces</p>
@@ -193,69 +230,100 @@ h1 {
     </div>
 </div>
 
+<!-- FILTROS -->
+<div class="filtros fade">
+    <button onclick="filtrar('todos')">Todos</button>
+    <button onclick="filtrar('torta')">Tortas</button>
+    <button onclick="filtrar('cupcake')">Cupcakes</button>
+    <button onclick="filtrar('mesa')">Mesas Dulces</button>
+</div>
+
 <section>
-    <h2 style="font-family:Pacifico; color:#d86b94; font-size:2.5rem;">Galería Destacada</h2>
+    <h2 style="font-family:Pacifico; color:#d86b94; font-size:2.5rem;" class="fade">Galería Destacada</h2>
 
     <div class="galeria">
 
-        <div class="item">
+        <div class="item torta fade">
             <img src="https://iili.io/fJSmju1.md.jpg">
             <h3>Torta Oreo Deluxe</h3>
-            <p>Bizcochuelo húmedo y crema Oreo artesanal con detalle premium.</p>
+            <p>Bizcochuelo húmedo y crema Oreo artesanal.</p>
         </div>
 
-        <div class="item">
+        <div class="item torta fade">
             <img src="https://iili.io/fJSmW8B.md.jpg">
             <h3>Cake Drip Rosa</h3>
-            <p>Goteo perfecto y tonos pastel suaves para ocasiones especiales.</p>
+            <p>Goteo perfecto y tonos pastel suaves.</p>
         </div>
 
-        <div class="item">
+        <div class="item cupcake fade">
             <img src="https://iili.io/fJSmM3Q.md.jpg">
             <h3>Mini Cupcakes Party</h3>
-            <p>Suaves, esponjosos y decorados a mano. Listos para cualquier fiesta.</p>
+            <p>Suaves, esponjosos y decorados a mano.</p>
         </div>
 
-        <div class="item">
+        <div class="item torta fade">
             <img src="https://iili.io/fJSmXyP.md.jpg">
             <h3>Torta Ferrero Premium</h3>
-            <p>Chocolate intenso, avellanas y una terminación increíble.</p>
+            <p>Chocolate intenso y avellanas.</p>
         </div>
 
-        <div class="item">
+        <div class="item torta fade">
             <img src="https://iili.io/fJSmNZg.md.jpg">
             <h3>Red Velvet Gold</h3>
-            <p>Un clásico elegante con detalles dorados y textura suave.</p>
+            <p>Clásico elegante con detalles dorados.</p>
         </div>
 
-        <div class="item">
+        <div class="item torta fade">
             <img src="https://iili.io/fJSmena.md.jpg">
             <h3>Lemon Pie Italiano</h3>
-            <p>Crema cítrica, base crocante y merengue tostado perfecto.</p>
+            <p>Merengue tostado perfecto.</p>
         </div>
 
-        <div class="item">
+        <div class="item torta fade">
             <img src="https://iili.io/fJSmkMJ.md.jpg">
             <h3>Cheesecake Frutos Rojos</h3>
-            <p>Cremoso, fresco y decorado con frutos rojos naturales.</p>
+            <p>Cremoso y fresco.</p>
         </div>
 
-        <div class="item">
+        <div class="item torta fade">
             <img src="https://iili.io/fJSmv6v.md.jpg">
             <h3>Cake Rosa Pastel</h3>
-            <p>Diseño delicado con tonos suaves y sabor inolvidable.</p>
+            <p>Diseño delicado y sabor increíble.</p>
         </div>
 
     </div>
 
-    <a class="btn-instagram-full" href="https://www.instagram.com/dulce_juana.2021/" target="_blank">
+    <a class="btn-instagram-full fade" href="https://www.instagram.com/dulce_juana.2021/" target="_blank">
         Ver catálogo completo en Instagram
     </a>
 </section>
 
-<footer style="margin:40px 0;">
-    © 2025 Dulce Juana™ — Repostería Premium
+<footer>
+    © 2025 Dulce Juana™ — Repostería Premium <br>
+    <small>Creado y diseñado por <strong>CIBORG 347™</strong></small>
 </footer>
+
+<!-- JS FILTROS + ANIMACIÓN -->
+<script>
+function filtrar(categoria) {
+    let items = document.querySelectorAll('.item');
+    items.forEach(i => {
+        i.style.display = (categoria === 'todos' || i.classList.contains(categoria)) ? 'block' : 'none';
+    });
+}
+
+const faders = document.querySelectorAll('.fade');
+function showOnScroll() {
+    faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+            el.classList.add('show');
+        }
+    });
+}
+window.addEventListener('scroll', showOnScroll);
+window.onload = showOnScroll;
+</script>
 
 </body>
 </html>
