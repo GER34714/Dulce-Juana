@@ -23,188 +23,154 @@ body {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(180deg, #fdebf4 0%, #ffeef7 40%, #fff7fc 100%);
     color: #6a5b5b;
-    overflow-x: hidden;
     text-align: center;
-}
-
-/* ANIMACIÓN SCROLL */
-.fade {
-    opacity: 0;
-    transform: translateY(25px);
-    transition: all .8s ease;
-}
-.fade.show {
-    opacity: 1;
-    transform: translateY(0);
+    overflow-x: hidden;
 }
 
 /* HERO */
 .hero {
     padding: 70px 20px;
-    background: transparent;
-    border-radius: 0 0 45px 45px;
 }
-
 .hero img {
-    width: 240px;
-    filter: drop-shadow(0px 0px 12px rgba(255,255,255,0.8));
+    width: 220px;
+    filter: drop-shadow(0px 0px 10px rgba(255,255,255,0.8));
 }
-
 h1 {
-    font-family: "Pacifico", cursive;
+    font-family: "Pacifico";
     color: #d86b94;
     font-size: 3rem;
-    margin-top: 20px;
 }
-
 .sub {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-/* BOTONES HERO */
+/* BOTONES */
 .btns {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-
 .btn {
     display: flex;
     align-items: center;
-    gap: 8px;
-    text-decoration: none;
     background: white;
     padding: 12px 22px;
     border-radius: 40px;
-    font-size: 1rem;
-    font-weight: 600;
     color: #6a5b5b;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.2s;
-}
-
-.btn:hover { transform: scale(1.05); }
-
-.btn img { width: 24px; }
-
-/* FILTROS */
-.filtros {
-    margin: 30px auto;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.filtros button {
-    background: white;
-    border: 2px solid #d86b94;
-    color: #d86b94;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
+    text-decoration: none;
     font-weight: 600;
-    transition: .2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+.btn img { width: 22px; }
 
-.filtros button:hover {
-    background: #d86b94;
-    color: white;
+/* CARRUSEL */
+.carousel {
+    max-width: 360px;
+    margin: 40px auto;
+    position: relative;
 }
-
-/* GALERÍA */
-.galeria {
-    display: grid;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-    gap: 25px;
-    grid-template-columns: 1fr;
-}
-
-@media(min-width: 700px) {
-    .galeria {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.item {
+.card {
     background: white;
-    padding: 15px;
     border-radius: 18px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    border: 2px solid #f4dce7;
-    transition: .3s;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
-
-.item:hover { transform: translateY(-4px); }
-
-.item img {
+.card img {
     width: 100%;
     border-radius: 12px;
 }
-
-.item h3 {
+.card h3 {
     font-family: "Pacifico";
-    font-size: 1.7rem;
-    margin: 12px 0 5px;
     color: #d86b94;
+    font-size: 1.7rem;
+    margin: 10px 0 5px;
 }
-
-.item p {
+.card p {
     font-size: 1rem;
-    margin: 0;
+    color: #6a5b5b;
 }
 
-/* BOTÓN IG */
-.btn-instagram-full {
-    margin: 40px auto 10px;
+/* FLECHAS */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    display: none;
+}
+.arrow img { width: 22px; }
+.left { left: -45px; }
+.right { right: -45px; }
+
+@media(min-width: 768px){
+    .arrow { display: block; }
+}
+
+/* BOTÓN INSTAGRAM */
+.btn-instagram {
     display: inline-block;
-    background: #ffffff;
-    padding: 14px 30px;
+    background: white;
+    border: 2px solid #d86b94;
+    padding: 12px 26px;
     border-radius: 40px;
-    box-shadow: 0 5px 14px rgba(0,0,0,0.15);
-    font-weight: 600;
+    margin-top: 30px;
     text-decoration: none;
     color: #d86b94;
-    border: 2px solid #d86b94;
-    transition: 0.2s;
+    font-weight: 600;
 }
 
-.btn-instagram-full:hover { transform: scale(1.05); }
+/* RESEÑAS */
+.reviews {
+    max-width: 600px;
+    margin: 50px auto;
+}
+.review {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    font-style: italic;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-/* FLOAT ICONS */
+/* ICONOS FLOTANTES */
 .float {
     position: fixed;
     bottom: 15px;
     right: 15px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    z-index: 999;
+    gap: 10px;
 }
-
 .float img {
     width: 40px;
 }
-
-@media(min-width: 700px) {
+@media(min-width: 700px){
     .float img { width: 55px; }
 }
 
+/* FOOTER */
 footer {
     margin-top: 60px;
-    font-size: 0.9rem;
     padding: 20px 0;
     color: #b48a9a;
+}
+footer a {
+    color: #d86b94;
+    font-weight: 600;
+    text-decoration: none;
 }
 </style>
 </head>
 
 <body>
 
-<!-- FLOAT ICONS -->
+<!-- ICONOS FLOTANTES -->
 <div class="float">
     <a href="https://wa.me/541162854827" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
@@ -215,114 +181,88 @@ footer {
 </div>
 
 <!-- HERO -->
-<div class="hero fade">
-    <img src="https://iili.io/fJUF6Av.md.jpg" alt="Logo Dulce Juana">
+<div class="hero">
+    <img src="https://iili.io/fJUF6Av.md.jpg">
     <h1>Dulce Juana™</h1>
     <p class="sub">Repostería artesanal • Tortas premium • Mesas dulces</p>
 
     <div class="btns">
         <a class="btn" href="https://wa.me/541162854827" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"> Hacer Pedido
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+            Hacer Pedido
         </a>
         <a class="btn" href="https://www.instagram.com/dulce_juana.2021/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"> Instagram
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+            Instagram
         </a>
     </div>
 </div>
 
-<!-- FILTROS -->
-<div class="filtros fade">
-    <button onclick="filtrar('todos')">Todos</button>
-    <button onclick="filtrar('torta')">Tortas</button>
-    <button onclick="filtrar('cupcake')">Cupcakes</button>
-    <button onclick="filtrar('mesa')">Mesas Dulces</button>
-</div>
-
-<section>
-    <h2 style="font-family:Pacifico; color:#d86b94; font-size:2.5rem;" class="fade">Galería Destacada</h2>
-
-    <div class="galeria">
-
-        <div class="item torta fade">
-            <img src="https://iili.io/fJSmju1.md.jpg">
-            <h3>Torta Oreo Deluxe</h3>
-            <p>Bizcochuelo húmedo y crema Oreo artesanal.</p>
-        </div>
-
-        <div class="item torta fade">
-            <img src="https://iili.io/fJSmW8B.md.jpg">
-            <h3>Cake Drip Rosa</h3>
-            <p>Goteo perfecto y tonos pastel suaves.</p>
-        </div>
-
-        <div class="item cupcake fade">
-            <img src="https://iili.io/fJSmM3Q.md.jpg">
-            <h3>Mini Cupcakes Party</h3>
-            <p>Suaves, esponjosos y decorados a mano.</p>
-        </div>
-
-        <div class="item torta fade">
-            <img src="https://iili.io/fJSmXyP.md.jpg">
-            <h3>Torta Ferrero Premium</h3>
-            <p>Chocolate intenso y avellanas.</p>
-        </div>
-
-        <div class="item torta fade">
-            <img src="https://iili.io/fJSmNZg.md.jpg">
-            <h3>Red Velvet Gold</h3>
-            <p>Clásico elegante con detalles dorados.</p>
-        </div>
-
-        <div class="item torta fade">
-            <img src="https://iili.io/fJSmena.md.jpg">
-            <h3>Lemon Pie Italiano</h3>
-            <p>Merengue tostado perfecto.</p>
-        </div>
-
-        <div class="item torta fade">
-            <img src="https://iili.io/fJSmkMJ.md.jpg">
-            <h3>Cheesecake Frutos Rojos</h3>
-            <p>Cremoso y fresco.</p>
-        </div>
-
-        <div class="item torta fade">
-            <img src="https://iili.io/fJSmv6v.md.jpg">
-            <h3>Cake Rosa Pastel</h3>
-            <p>Diseño delicado y sabor increíble.</p>
-        </div>
-
+<!-- CARRUSEL -->
+<div class="carousel">
+    <div class="card" id="card">
+        <img id="cimg">
+        <h3 id="ctitle"></h3>
+        <p id="cdesc"></p>
     </div>
 
-    <a class="btn-instagram-full fade" href="https://www.instagram.com/dulce_juana.2021/" target="_blank">
-        Ver catálogo completo en Instagram
-    </a>
-</section>
+    <div class="arrow left" onclick="prev()">
+        <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png">
+    </div>
+    <div class="arrow right" onclick="next()">
+        <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" style="transform:rotate(180deg)">
+    </div>
+</div>
+
+<!-- INSTAGRAM -->
+<a class="btn-instagram" href="https://www.instagram.com/dulce_juana.2021/" target="_blank">
+    Ver catálogo completo en Instagram
+</a>
+
+<!-- RESEÑAS -->
+<div class="reviews">
+    <div class="review">“La mejor torta que probé en mi vida.” ⭐⭐⭐⭐⭐</div>
+    <div class="review">“Encargué cupcakes para un evento y fueron un éxito total.” ⭐⭐⭐⭐⭐</div>
+    <div class="review">“Atención hermosa, calidad y dedicación en cada detalle.” ⭐⭐⭐⭐⭐</div>
+</div>
 
 <footer>
     © 2025 Dulce Juana™ — Repostería Premium <br>
-    <small>Creado y diseñado por <strong>CIBORG 347™</strong></small>
+    <small>Creado y diseñado por <a href="https://ciborg347.onrender.com" target="_blank">CIBORG 347™</a></small>
 </footer>
 
-<!-- JS FILTROS + ANIMACIÓN -->
+<!-- JAVASCRIPT CARRUSEL -->
 <script>
-function filtrar(categoria) {
-    let items = document.querySelectorAll('.item');
-    items.forEach(i => {
-        i.style.display = (categoria === 'todos' || i.classList.contains(categoria)) ? 'block' : 'none';
-    });
+let fotos = [
+    {img:"https://iili.io/fJSmju1.md.jpg", title:"Torta Oreo Deluxe", desc:"Bizcochuelo húmedo y crema Oreo artesanal."},
+    {img:"https://iili.io/fJSmW8B.md.jpg", title:"Cake Drip Rosa", desc:"Tonos pastel y goteo perfecto."},
+    {img:"https://iili.io/fJSmM3Q.md.jpg", title:"Mini Cupcakes Party", desc:"Esponjosos y decorados a mano."},
+    {img:"https://iili.io/fJSmXyP.md.jpg", title:"Torta Ferrero Premium", desc:"Chocolate intenso y avellanas."},
+    {img:"https://iili.io/fJSmNZg.md.jpg", title:"Red Velvet Gold", desc:"Elegancia en cada bocado."},
+    {img:"https://iili.io/fJSmena.md.jpg", title:"Lemon Pie Italiano", desc:"Cítrico, fresco y con merengue tostado."},
+    {img:"https://iili.io/fJSmkMJ.md.jpg", title:"Cheesecake Frutos Rojos", desc:"Cremoso y balanceado."},
+    {img:"https://iili.io/fJSmv6v.md.jpg", title:"Cake Rosa Pastel", desc:"Delicado y con sabor único."}
+];
+
+let i = 0;
+
+function mostrar(){
+    document.getElementById("cimg").src = fotos[i].img;
+    document.getElementById("ctitle").innerText = fotos[i].title;
+    document.getElementById("cdesc").innerText = fotos[i].desc;
+}
+mostrar();
+
+function next(){
+    i = (i+1) % fotos.length;
+    mostrar();
+}
+function prev(){
+    i = (i-1+fotos.length) % fotos.length;
+    mostrar();
 }
 
-const faders = document.querySelectorAll('.fade');
-function showOnScroll() {
-    faders.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 50) {
-            el.classList.add('show');
-        }
-    });
-}
-window.addEventListener('scroll', showOnScroll);
-window.onload = showOnScroll;
+setInterval(next, 4500); // CAMBIO AUTOMÁTICO SUAVE
 </script>
 
 </body>
