@@ -18,186 +18,153 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
-    body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        background: #fdebf4;
-        color: #6a5b5b;
-        overflow-x: hidden;
-        text-align: center;
-    }
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #fdebf4;
+    color: #6a5b5b;
+    overflow-x: hidden;
+    text-align: center;
+}
 
-    /* HERO */
-    .hero {
-        padding: 70px 20px;
-        background: url('https://iili.io/J9v2iyu.jpg') center/cover no-repeat;
-        background-attachment: fixed;
-        border-radius: 0 0 45px 45px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        position: relative;
-        animation: fadeIn 1.2s ease;
-    }
+/* HERO */
+.hero {
+    padding: 70px 20px;
+    background: #fdebf4;
+    border-radius: 0 0 45px 45px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
 
-    .hero img {
-        width: 240px;
-        filter: drop-shadow(0px 0px 12px rgba(255,255,255,0.8));
-    }
+.hero img {
+    width: 240px;
+    filter: drop-shadow(0px 0px 12px rgba(255,255,255,0.8));
+}
 
-    h1 {
-        font-family: "Pacifico", cursive;
-        color: #d86b94;
-        font-size: 3rem;
-        margin-top: 20px;
-    }
+h1 {
+    font-family: "Pacifico", cursive;
+    color: #d86b94;
+    font-size: 3rem;
+    margin-top: 20px;
+}
 
-    .sub {
-        font-size: 1.3rem;
-        margin-bottom: 20px;
-    }
+.sub {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
 
-    /* BOTONES */
-    .btns {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
-    }
+/* BOTONES */
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
 
-    .btn {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        text-decoration: none;
-        background: white;
-        padding: 12px 22px;
-        border-radius: 40px;
-        font-size: 1rem;
-        font-weight: 600;
-        color: #6a5b5b;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        transition: 0.2s;
-    }
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background: white;
+    padding: 12px 22px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6a5b5b;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
 
-    .btn:hover { transform: scale(1.05); }
+.btn:hover { transform: scale(1.05); }
 
-    .btn img { width: 24px; }
+.btn img { width: 24px; }
 
+/* GALERÍA + TEXTOS */
+.galeria {
+    display: grid;
+    max-width: 1000px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
 
-    /* SLIDER */
-    .slider {
-        margin: 40px auto;
-        max-width: 900px;
-        border-radius: 22px;
-        overflow: hidden;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
+.item {
+    background: white;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
 
-    .slides {
-        display: flex;
-        width: 800%;
-        animation: slide 20s infinite;
-    }
+.item:hover { transform: scale(1.03); }
 
-    .slides img {
-        width: 100%;
-        object-fit: cover;
-    }
+.item img {
+    width: 100%;
+    border-radius: 15px;
+}
 
-    @keyframes slide {
-        0% { margin-left: 0; }
-        10% { margin-left: 0; }
-        20% { margin-left: -100%; }
-        30% { margin-left: -200%; }
-        40% { margin-left: -300%; }
-        50% { margin-left: -400%; }
-        60% { margin-left: -500%; }
-        70% { margin-left: -600%; }
-        80% { margin-left: -700%; }
-        100% { margin-left: -700%; }
-    }
+.item h3 {
+    font-family: "Pacifico";
+    color: #d86b94;
+    font-size: 1.6rem;
+    margin: 12px 0 5px;
+}
 
-    /* SECCIONES */
-    section { padding: 40px 20px; }
+.item p {
+    font-size: 0.95rem;
+    color: #6a5b5b;
+}
 
-    h2 {
-        font-family: "Pacifico";
-        font-size: 2.4rem;
-        color: #d86b94;
-        margin-bottom: 20px;
-    }
+/* BOTÓN IG */
+.btn-instagram-full {
+    margin: 40px auto 10px;
+    display: inline-block;
+    background: #ffffff;
+    padding: 14px 30px;
+    border-radius: 40px;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+    font-weight: 600;
+    text-decoration: none;
+    color: #d86b94;
+    border: 2px solid #d86b94;
+    transition: 0.2s;
+}
 
-    .cards {
-        max-width: 950px;
-        margin: auto;
-        display: grid;
-        gap: 25px;
-    }
+.btn-instagram-full:hover { transform: scale(1.05); }
 
-    .card {
-        background: white;
-        padding: 20px;
-        border-radius: 20px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-        font-size: 1rem;
-        animation: fadeInUp 1.2s;
-    }
+/* OPINIONES */
+.opiniones {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 25px;
+    padding: 20px;
+}
 
-    /* GALERÍA */
-    .galeria {
-        display: grid;
-        max-width: 1000px;
-        margin: auto;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
+.op {
+    background: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    font-style: italic;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
 
-    .galeria img {
-        width: 100%;
-        border-radius: 18px;
-        box-shadow: 0 5px 18px rgba(0,0,0,0.2);
-        transition: 0.3s;
-    }
+/* FLOAT ICONS */
+.float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 999;
+}
 
-    .galeria img:hover {
-        transform: scale(1.05);
-    }
-
-    /* OPINIONES */
-    .opiniones {
-        max-width: 900px;
-        margin: auto;
-        display: grid;
-        gap: 25px;
-    }
-
-    .op {
-        background: #fff;
-        padding: 20px;
-        border-radius: 18px;
-        font-style: italic;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    }
-
-    /* FLOTANTES */
-    .float {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        z-index: 999;
-    }
-
-    .float img {
-        width: 55px;
-        filter: drop-shadow(0 3px 10px rgba(0,0,0,0.3));
-    }
-
-    /* ANIMACIONES */
-    @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
-    @keyframes fadeInUp { from{opacity:0; transform: translateY(20px);} to{opacity:1; transform: translateY(0);} }
-
+.float img {
+    width: 55px;
+    filter: drop-shadow(0 3px 10px rgba(0,0,0,0.3));
+}
 </style>
 </head>
 
@@ -205,8 +172,12 @@
 
 <!-- FLOAT ICONS -->
 <div class="float">
-    <a href="https://wa.me/541162854827" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></a>
-    <a href="https://www.instagram.com/dulce_juana.2021/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"></a>
+    <a href="https://wa.me/541162854827" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+    </a>
+    <a href="https://www.instagram.com/dulce_juana.2021/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+    </a>
 </div>
 
 <!-- HERO -->
@@ -216,54 +187,82 @@
     <p class="sub">Repostería artesanal • Tortas premium • Mesas dulces</p>
 
     <div class="btns">
-        <a class="btn" href="https://wa.me/541162854827" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"> Hacer Pedido</a>
-        <a class="btn" href="https://www.instagram.com/dulce_juana.2021/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"> Instagram</a>
-    </div>
-</div>
-
-<!-- SLIDER -->
-<div class="slider">
-    <div class="slides">
-        <img src="https://iili.io/fJSmju1.md.jpg">
-        <img src="https://iili.io/fJSmW8B.md.jpg">
-        <img src="https://iili.io/fJSmM3Q.md.jpg">
-        <img src="https://iili.io/fJSmXyP.md.jpg">
-        <img src="https://iili.io/fJSmNZg.md.jpg">
-        <img src="https://iili.io/fJSmena.md.jpg">
-        <img src="https://iili.io/fJSmkMJ.md.jpg">
-        <img src="https://iili.io/fJSmv6v.md.jpg">
+        <a class="btn" href="https://wa.me/541162854827" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"> Hacer Pedido
+        </a>
+        <a class="btn" href="https://www.instagram.com/dulce_juana.2021/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"> Instagram
+        </a>
     </div>
 </div>
 
 <section>
-    <h2>Galería</h2>
+    <h2 style="font-family:Pacifico; color:#d86b94; font-size:2.5rem;">Galería Destacada</h2>
+
     <div class="galeria">
-        <img src="https://iili.io/fJSmju1.md.jpg">
-        <img src="https://iili.io/fJSmW8B.md.jpg">
-        <img src="https://iili.io/fJSmM3Q.md.jpg">
-        <img src="https://iili.io/fJSmXyP.md.jpg">
-        <img src="https://iili.io/fJSmNZg.md.jpg">
-        <img src="https://iili.io/fJSmena.md.jpg">
-        <img src="https://iili.io/fJSmkMJ.md.jpg">
-        <img src="https://iili.io/fJSmv6v.md.jpg">
+
+        <div class="item">
+            <img src="https://iili.io/fJSmju1.md.jpg">
+            <h3>Torta Oreo Deluxe</h3>
+            <p>Bizcochuelo húmedo, crema Oreo artesanal y decoración premium.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://iili.io/fJSmW8B.md.jpg">
+            <h3>Cake Drip Rosa</h3>
+            <p>El clásico drip rosa con detalles elegantes y terminación brillante.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://iili.io/fJSmM3Q.md.jpg">
+            <h3>Mini Cupcakes Party</h3>
+            <p>Esponjosos, suaves y decorados a mano. Ideales para eventos.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://iili.io/fJSmXyP.md.jpg">
+            <h3>Torta Ferrero Premium</h3>
+            <p>Sabor intenso con avellanas, chocolate y decoración de lujo.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://iili.io/fJSmNZg.md.jpg">
+            <h3>Red Velvet Gold</h3>
+            <p>La clásica velvet con un toque dorado y textura increíble.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://iili.io/fJSmena.md.jpg">
+            <h3>Lemon Pie Italiano</h3>
+            <p>Base crocante, crema de limón y merengue tostado perfecto.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://iili.io/fJSmkMJ.md.jpg">
+            <h3>Cheesecake Frutos Rojos</h3>
+            <p>Cremoso, fresco e ideal para ocasiones especiales.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://iili.io/fJSmv6v.md.jpg">
+            <h3>Cake Rosa Pastel</h3>
+            <p>Diseño delicado, tonos suaves y un sabor inolvidable.</p>
+        </div>
+
     </div>
+
+    <a class="btn-instagram-full" href="https://www.instagram.com/dulce_juana.2021/" target="_blank">
+        Ver catálogo completo en Instagram
+    </a>
 </section>
 
 <section>
-    <h2>Opiniones</h2>
+    <h2 style="font-family:Pacifico; color:#d86b94; font-size:2.5rem;">Opiniones</h2>
+
     <div class="opiniones">
-        <div class="op">“La mejor torta que pedí en mi vida, un sueño total.” ⭐⭐⭐⭐⭐</div>
+        <div class="op">“La mejor torta que pedí en mi vida. Un sueño total.” ⭐⭐⭐⭐⭐</div>
         <div class="op">“Calidad premium, súper recomendable.” ⭐⭐⭐⭐⭐</div>
         <div class="op">“Atención hermosa y el sabor es de otro planeta.” ⭐⭐⭐⭐⭐</div>
-    </div>
-</section>
-
-<section>
-    <h2>Cómo Hacer Tu Pedido</h2>
-    <div class="cards">
-        <div class="card">1. Elegí el estilo y tamaño de la torta.</div>
-        <div class="card">2. Enviá una foto de referencia por WhatsApp.</div>
-        <div class="card">3. Coordiná fecha y horario de entrega.</div>
     </div>
 </section>
 
