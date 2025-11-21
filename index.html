@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dulce Juana™ | Repostería Premium</title>
+<title>Dulce Juana | Repostería Premium</title>
 
 <!-- FAVICON -->
 <link rel="icon" href="https://iili.io/fJUF6Av.md.jpg" type="image/png">
 
 <!-- OPEN GRAPH -->
-<meta property="og:title" content="Dulce Juana™ | Repostería Artesanal Premium">
-<meta property="og:description" content="Tortas premium, mesas dulces y repostería artesanal. Hacé tu pedido por WhatsApp.">
+<meta property="og:title" content="Dulce Juana | Repostería Artesanal Premium">
+<meta property="og:description" content="Tortas personalizadas, desayunos, tartas y repostería artesanal. Hacé tu pedido por WhatsApp.">
 <meta property="og:image" content="https://iili.io/fJUF6Av.md.jpg">
 <meta property="og:type" content="website">
 
@@ -43,8 +43,19 @@ h1 {
 }
 .sub {
     font-size: 1.25rem;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-weight: 500;
+}
+
+/* TEXTO EXPLICATIVO */
+.info-box {
+    max-width: 380px;
+    margin: 0 auto 25px;
+    background: white;
+    padding: 18px;
+    border-radius: 18px;
+    font-size: 1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
 /* BOTONES */
@@ -58,7 +69,7 @@ h1 {
     display: flex;
     align-items: center;
     background: white;
-    padding: 12px 24px;
+    padding: 12px 26px;
     border-radius: 40px;
     color: #6a5b5b;
     text-decoration: none;
@@ -67,7 +78,7 @@ h1 {
     transition: 0.2s;
 }
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 .btn img { width: 22px; margin-right: 8px; }
 
@@ -156,6 +167,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    z-index: 999;
 }
 .float img {
     width: 42px;
@@ -166,7 +178,7 @@ h1 {
 
 /* FOOTER */
 footer {
-    margin-top: 70px;
+    margin-top: 80px;
     padding: 20px 0;
     color: #b48a9a;
     font-size: 0.9rem;
@@ -194,8 +206,17 @@ footer a {
 <!-- HERO -->
 <div class="hero">
     <img src="https://iili.io/fJUF6Av.md.jpg">
-    <h1>Dulce Juana™</h1>
-    <p class="sub">Repostería artesanal premium • Tortas • Tartas • Mesas dulces</p>
+    <h1>Dulce Juana</h1>
+
+    <p class="sub">Repostería artesanal premium • Tortas personalizadas • Mesas dulces</p>
+
+    <div class="info-box">
+        ✨ Tortas personalizadas  
+        ✨ Desayunos y box materos  
+        ✨ Tartas, budines, alfajores y muchas cosas ricas más  
+        <br><br>
+        📦 Pedidos por WhatsApp — Envíos disponibles (costo mínimo)
+    </div>
 
     <div class="btns">
         <a class="btn" href="https://wa.me/541162854827" target="_blank">
@@ -227,7 +248,7 @@ footer a {
 
 <!-- INSTAGRAM -->
 <a class="btn-instagram" href="https://www.instagram.com/dulce_juana.2021/" target="_blank">
-    Ver catálogo completo en Instagram
+    Ver más trabajos en Instagram
 </a>
 
 <!-- RESEÑAS -->
@@ -238,21 +259,19 @@ footer a {
 </div>
 
 <footer>
-    © 2025 Dulce Juana™ — Repostería Premium <br>
-    <small>Creado y diseñado por <a href="https://ciborg347.onrender.com" target="_blank">CIBORG 347™</a></small>
+    © 2025 Dulce Juana — Repostería Artesanal Premium <br>
+    <small>Creado y diseñado por <a href="https://ciborg347.onrender.com" target="_blank">CIBORG 347</a></small>
 </footer>
 
 <!-- JAVASCRIPT CARRUSEL -->
 <script>
 let fotos = [
-    {img:"https://iili.io/fJSmju1.md.jpg", title:"Torta Oreo Deluxe", desc:"Bizcochuelo húmedo, crema Oreo y decoración premium."},
-    {img:"https://iili.io/fJSmW8B.md.jpg", title:"Cake Drip Rosa", desc:"Diseño pastel delicado con goteo perfecto."},
-    {img:"https://iili.io/fJSmM3Q.md.jpg", title:"Mini Cupcakes Party", desc:"Esponjosos, coloridos y decorados a mano."},
-    {img:"https://iili.io/fJSmXyP.md.jpg", title:"Torta Ferrero Gold", desc:"Chocolate intenso, avellanas y textura única."},
-    {img:"https://iili.io/fJSmNZg.md.jpg", title:"Red Velvet Gold", desc:"Sabor suave, color vibrante y terminación fina."},
-    {img:"https://iili.io/fJSmena.md.jpg", title:"Lemon Pie Italiano", desc:"Fresco, cítrico y con merengue tostado artesanal."},
-    {img:"https://iili.io/fJSmkMJ.md.jpg", title:"Cheesecake Frutos Rojos", desc:"Cremoso, dulce y balance perfecto."},
-    {img:"https://iili.io/fJSmv6v.md.jpg", title:"Cake Rosa Pastel", desc:"Un clásico delicado para cualquier ocasión."}
+    {img:"https://iili.io/f3McI94.md.jpg", title:"Budines Caseros", desc:"Deliciosos budines húmedos y esponjosos."},
+    {img:"https://iili.io/f3McuN2.md.jpg", title:"Tarta de Frutillas", desc:"Fresca, suave y hecha con frutillas seleccionadas."},
+    {img:"https://iili.io/f3McTAl.md.jpg", title:"Desayunos Artesanales", desc:"Box desayuno completo para sorprender."},
+    {img:"https://iili.io/f3McBPn.md.jpg", title:"Mini Donas", desc:"Mini donas glaseadas irresistibles."},
+    {img:"https://iili.io/f3Mc7V9.md.jpg", title:"Tortas Artesanales", desc:"Tortas personalizadas para cualquier ocasión."},
+    {img:"https://iili.io/f3MccKu.md.jpg", title:"Box Matero", desc:"Box materos listos para regalar."},
 ];
 
 let i = 0;
